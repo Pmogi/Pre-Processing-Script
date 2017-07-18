@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<dubman:template xmlns:dubman="http://dubman.sourceforge.net" name="" format="1.1" version="0.83">
+  <dubman:bulk />
+  <dubman:jobs>
+    <dubman:job>
+      <dubman:name value="Work File" />
+      <dubman:input value="C:\Users\ktichauer\Desktop\quickEdit\movie2edit.avi" />
+      <dubman:output value="C:\Users\ktichauer\Desktop\quickEdit\editedMovie.avi" />
+      <dubman:deleteInput value="false" />
+      <dubman:script>VirtualDub.audio.SetSource(1);&#xD;
+VirtualDub.audio.SetMode(0);&#xD;
+VirtualDub.audio.SetInterleave(1,500,1,0,0);&#xD;
+VirtualDub.audio.SetClipMode(1,1);&#xD;
+VirtualDub.audio.SetEditMode(1);&#xD;
+VirtualDub.audio.SetConversion(0,0,0,0,0);&#xD;
+VirtualDub.audio.SetVolume();&#xD;
+VirtualDub.audio.SetCompression();&#xD;
+VirtualDub.audio.EnableFilterGraph(0);&#xD;
+VirtualDub.video.SetInputFormat(0);&#xD;
+VirtualDub.video.SetOutputFormat(7);&#xD;
+VirtualDub.video.SetMode(3);&#xD;
+VirtualDub.video.SetSmartRendering(0);&#xD;
+VirtualDub.video.SetPreserveEmptyFrames(0);&#xD;
+VirtualDub.video.SetFrameRate2(0,0,99);&#xD;
+VirtualDub.video.SetIVTC(0, 0, 0, 0);&#xD;
+VirtualDub.video.SetCompression();&#xD;
+VirtualDub.video.filters.Clear();&#xD;
+VirtualDub.video.filters.Add("resize");&#xD;
+VirtualDub.video.filters.instance[0].Config(256,192,0,4,3,1,320,240,4,3,0,4,1,0x000000);&#xD;
+VirtualDub.audio.filters.Clear();</dubman:script>
+      <dubman:runWith value="0" />
+    </dubman:job>
+  </dubman:jobs>
+</dubman:template>
+
