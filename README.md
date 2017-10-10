@@ -19,7 +19,7 @@ Optional:
 - DubMan, a handy tool that creates scripts for VirtualDub for batch processes. Beats having to tussle with
 the awful Vdub scripting language.
 
-**quickEdit.py starts the program**
+**main.py starts the program**
 
 *warning* If files get moved around/filenames change, you may need to change some Paths in the python/vdub script.
 Most of this script is honestly me moving things around through accessing the windows commandline through python.
